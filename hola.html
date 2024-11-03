@@ -21,17 +21,29 @@
                 <div class="column is-one-third box item">
                     <h3 class="title is-4">Churrasco</h3>
                     <p class="subtitle">Precio: $4.000</p>
-                    <button class="button is-success" onclick="mostrarDetalles('Churrasco', 4000)">Ver detalles</button>
+                    <button class="button is-success" onclick="toggleDetails('churrasco')">Ver detalles</button>
+                    <div id="churrasco" class="details is-hidden">
+                        <p>Calorías: 800 kcal</p>
+                        <p>Ingredientes: Pan, carne de res, tomate, lechuga, mayonesa.</p>
+                    </div>
                 </div>
                 <div class="column is-one-third box item">
                     <h3 class="title is-4">Completo</h3>
                     <p class="subtitle">Precio: $2.500</p>
-                    <button class="button is-success" onclick="mostrarDetalles('Completo', 2500)">Ver detalles</button>
+                    <button class="button is-success" onclick="toggleDetails('completo')">Ver detalles</button>
+                    <div id="completo" class="details is-hidden">
+                        <p>Calorías: 600 kcal</p>
+                        <p>Ingredientes: Pan, salchicha, tomate, palta, mayonesa.</p>
+                    </div>
                 </div>
                 <div class="column is-one-third box item">
                     <h3 class="title is-4">Barros Luco</h3>
                     <p class="subtitle">Precio: $3.500</p>
-                    <button class="button is-success" onclick="mostrarDetalles('Barros Luco', 3500)">Ver detalles</button>
+                    <button class="button is-success" onclick="toggleDetails('barros-luco')">Ver detalles</button>
+                    <div id="barros-luco" class="details is-hidden">
+                        <p>Calorías: 750 kcal</p>
+                        <p>Ingredientes: Pan, carne de res, queso.</p>
+                    </div>
                 </div>
             </div>
         </div>

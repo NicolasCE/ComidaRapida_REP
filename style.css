@@ -21,6 +21,18 @@ header {
     width: 100%;
 }
 
+.details {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.is-hidden {
+    display: none;
+}
+
 #menu {
     margin-top: 2rem;
     width: 80%;
@@ -74,3 +86,5 @@ button:hover {
 .whatsapp-btn:hover {
     background-color: #1ebc55;
 }
+
+
