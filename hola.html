@@ -7,6 +7,8 @@
     <!-- Agregar Bulma -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="style.css">
+     <!-- Agregar Animate.css -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 <body>
     <header class="hero is-danger">
@@ -14,13 +16,14 @@
             <h1 class="title has-text-centered">Bienvenidos a Comida Rápida Express</h1>
         </div>
     </header>
-    <section id="menu" class="section">
+    <section id="menu" class="section menu-section">
         <h2 class="title has-text-centered">Menú</h2>
         <div class="container">
             <div class="columns is-centered">
                 <div class="column is-one-third box item">
-                    <h3 class="title is-4">Churrasco</h3>
-                    <p class="subtitle">Precio: $4.000</p>
+                    <h3 class="title is-4 has-text-centered">Churrasco</h3>
+                    <img src="img/churras.jpg" alt="Churrasco" class="menu-image">
+                    <p class="subtitle has-text-centered">Precio: $4.000</p>
                     <button class="button is-success" onclick="toggleDetails('churrasco')">Ver detalles</button>
                     <div id="churrasco" class="details is-hidden">
                         <p>Calorías: 800 kcal</p>
@@ -28,8 +31,9 @@
                     </div>
                 </div>
                 <div class="column is-one-third box item">
-                    <h3 class="title is-4">Completo</h3>
-                    <p class="subtitle">Precio: $2.500</p>
+                    <h3 class="title is-4 has-text-centered">Completo</h3>
+                    <img src="img/completo.jpg" alt="Completo" class="menu-image">
+                    <p class="subtitle has-text-centered">Precio: $2.500</p>
                     <button class="button is-success" onclick="toggleDetails('completo')">Ver detalles</button>
                     <div id="completo" class="details is-hidden">
                         <p>Calorías: 600 kcal</p>
@@ -37,8 +41,9 @@
                     </div>
                 </div>
                 <div class="column is-one-third box item">
-                    <h3 class="title is-4">Barros Luco</h3>
-                    <p class="subtitle">Precio: $3.500</p>
+                    <h3 class="title is-4 has-text-centered">Barros Luco</h3>
+                    <img src="img/br.jpg" alt="BarrosLuco" class="menu-image">
+                    <p class="subtitle has-text-centered">Precio: $3.500</p>
                     <button class="button is-success" onclick="toggleDetails('barros-luco')">Ver detalles</button>
                     <div id="barros-luco" class="details is-hidden">
                         <p>Calorías: 750 kcal</p>
@@ -48,13 +53,62 @@
             </div>
         </div>
     </section>
-    <section id="contacto" class="section">
-        <h2 class="title has-text-centered">Contacto</h2>
-        <p class="has-text-centered">Agenda tu pedido a través de WhatsApp</p>
-        <div class="has-text-centered">
-            <a href="https://wa.me/973851366" target="_blank" class="button whatsapp-btn is-medium">Contactar por WhatsApp</a>
+    <br>
+    <section id="reserva" class="section">
+        <div class="container">
+            <h2 class="title">Reservar Pedido</h2>
+            <form id="reservaForm">
+                <div class="field">
+                    <label class="label">Nombre</label>
+                    <div class="control">
+                        <input class="input" type="text" id="nombre" placeholder="Tu nombre" required>
+                    </div>
+                </div>
+    
+                <div class="field">
+                    <label class="label">Teléfono</label>
+                    <div class="control">
+                        <input class="input" type="tel" id="telefono" placeholder="Tu número de teléfono" required>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">Dirección de Entrega</label>
+                    <div class="control">
+                        <input class="input" type="text" id="direccion" placeholder="Dirección de entrega" required>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">Fecha y Hora</label>
+                    <div class="control">
+                        <input class="input" type="datetime-local" id="fechaHora" required>
+                    </div>
+                </div>
+
+                <div class="field"></div>
+                    <label class="label">Especifica el pedido</label>
+                    <div class="control">
+                        <input class="input" type="text" id="esp_pedido" placeholder="Detalla tu pedido" required>
+                    </div>
+                </div>
+                <br>
+                <div class="control">
+                    <button type="button" class="button is-primary" onclick="enviarReserva()">Enviar Pedido a WhatsApp</button>
+                </div>
+            </form>
         </div>
     </section>
+
+    <section id="ubicacion" class="section">
+        <div class="container has-text-centered">
+            <h3>Nos encontramos aqui: </h3> 
+            <a href="https://maps.app.goo.gl/dWyDSPgP4rAuhnrh6" target="_blank" title="Ver en Google Maps">
+                <img src="https://cdn-icons-png.flaticon.com/128/17415/17415788.png" alt="Mapa de ubicación" class="map-icon">
+            </a>
+        </div>
+    </section>
+
     <script src="ints.js"></script>
 </body>
 </html>

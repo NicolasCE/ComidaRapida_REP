@@ -39,7 +39,7 @@ header {
 }
 
 #menu h2 {
-    color: #ff6f61;
+    color: #0e0721;
 }
 
 .item {
@@ -51,7 +51,7 @@ header {
 }
 
 .item h3 {
-    color: #ff6f61;
+    color: #1a0705;
 }
 
 button {
@@ -85,6 +85,104 @@ button:hover {
 
 .whatsapp-btn:hover {
     background-color: #1ebc55;
+}
+
+#reserva .section {
+    background-color: #f5f5f5;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+}
+
+#reservaForm .button {
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.menu-image {
+    width: 100%; /* Ajusta el tamaño de la imagen al ancho del contenedor */
+    height: 200px;
+    height: auto; /* Mantiene la relación de aspecto de la imagen */
+    object-fit: cover;
+    border-radius: 5px; /* Bordes redondeados para un estilo más suave */
+    margin-top: 10px; /* Espacio entre la imagen y el contenido de texto */
+}
+
+#menu .item {
+    transition: box-shadow 0.9s ease; /* Transición suave para sombra */
+}
+
+#menu .item:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra al pasar el mouse */
+}
+
+/* Estilo para la sección de reserva */
+#reserva {
+    background-color: #ffffff; /* Fondo blanco para contraste */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 2rem; /* Espaciado interior */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para profundidad */
+}
+
+/* Estilo para el ícono del mapa */
+.map-icon {
+    width: 50px; /* Ajusta el tamaño del icono */
+    margin-top: 10px; /* Espacio entre el texto y el icono */
+}
+
+.menu-section {
+    background-image: url('img/menu.png'); /* Reemplaza con la ruta de tu imagen de fondo */
+    background-size: 100% 100%; /* Estira la imagen para que cubra todo el contenedor */
+    background-position: center; /* Centra la imagen (opcional, puede ser ignorado al usar 100%) */
+    padding: 2rem 0; /* Espaciado vertical */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container {
+    text-align: center; /* Centra el texto dentro del contenedor */
+}
+
+.columns {
+    display: flex; /* Usa Flexbox para el layout */
+    justify-content: center; /* Centra las columnas horizontalmente */
+}
+
+.item {
+    margin: 1rem; /* Espaciado entre las columnas */
+}
+
+.menu-image {
+    width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
 }
 
 
