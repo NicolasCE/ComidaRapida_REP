@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante de Comida Rápida</title>
+    <!-- Agregar Bulma -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="hero is-danger">
+        <div class="hero-body">
+            <h1 class="title has-text-centered">Bienvenidos a Comida Rápida Express</h1>
+        </div>
+    </header>
+    <section id="menu" class="section">
+        <h2 class="title has-text-centered">Menú</h2>
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-one-third box item">
+                    <h3 class="title is-4">Churrasco</h3>
+                    <p class="subtitle">Precio: $4.000</p>
+                    <button class="button is-success" onclick="mostrarDetalles('Churrasco', 4000)">Ver detalles</button>
+                </div>
+                <div class="column is-one-third box item">
+                    <h3 class="title is-4">Completo</h3>
+                    <p class="subtitle">Precio: $2.500</p>
+                    <button class="button is-success" onclick="mostrarDetalles('Completo', 2500)">Ver detalles</button>
+                </div>
+                <div class="column is-one-third box item">
+                    <h3 class="title is-4">Barros Luco</h3>
+                    <p class="subtitle">Precio: $3.500</p>
+                    <button class="button is-success" onclick="mostrarDetalles('Barros Luco', 3500)">Ver detalles</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contacto" class="section">
+        <h2 class="title has-text-centered">Contacto</h2>
+        <p class="has-text-centered">Agenda tu pedido a través de WhatsApp</p>
+        <div class="has-text-centered">
+            <a href="https://wa.me/973851366" target="_blank" class="button whatsapp-btn is-medium">Contactar por WhatsApp</a>
+        </div>
+    </section>
+    <script src="ints.js"></script>
+</body>
+</html>
