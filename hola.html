@@ -19,7 +19,7 @@
     <section id="menu" class="section menu-section">
         <h2 class="title has-text-centered">Menú</h2>
         <div class="container">
-            <div class="columns is-centered">
+            <div class="columns is-centered is-multiline">
                 <div class="column is-one-third box item">
                     <h3 class="title is-4 has-text-centered">Churrasco</h3>
                     <img src="img/churras.jpg" alt="Churrasco" class="menu-image">
@@ -42,7 +42,7 @@
                 </div>
                 <div class="column is-one-third box item">
                     <h3 class="title is-4 has-text-centered">Barros Luco</h3>
-                    <img src="img/br.jpg" alt="BarrosLuco" class="menu-image">
+                    <img src="img/br.jpg" alt="Barros Luco" class="menu-image">
                     <p class="subtitle has-text-centered">Precio: $3.500</p>
                     <button class="button is-success" onclick="toggleDetails('barros-luco')">Ver detalles</button>
                     <div id="barros-luco" class="details is-hidden">
@@ -53,52 +53,64 @@
             </div>
         </div>
     </section>
-    <br>
-    <section id="reserva" class="section">
-        <div class="container">
-            <h2 class="title">Reservar Pedido</h2>
-            <form id="reservaForm">
-                <div class="field">
-                    <label class="label">Nombre</label>
-                    <div class="control">
-                        <input class="input" type="text" id="nombre" placeholder="Tu nombre" required>
-                    </div>
-                </div>
     
-                <div class="field">
-                    <label class="label">Teléfono</label>
-                    <div class="control">
-                        <input class="input" type="tel" id="telefono" placeholder="Tu número de teléfono" required>
-                    </div>
-                </div>
+    <br>
 
-                <div class="field">
-                    <label class="label">Dirección de Entrega</label>
-                    <div class="control">
-                        <input class="input" type="text" id="direccion" placeholder="Dirección de entrega" required>
-                    </div>
-                </div>
-
-                <div class="field">
-                    <label class="label">Fecha y Hora</label>
-                    <div class="control">
-                        <input class="input" type="datetime-local" id="fechaHora" required>
-                    </div>
-                </div>
-
-                <div class="field"></div>
-                    <label class="label">Especifica el pedido</label>
-                    <div class="control">
-                        <input class="input" type="text" id="esp_pedido" placeholder="Detalla tu pedido" required>
-                    </div>
-                </div>
-                <br>
+    <section id="pedido">
+        <h2 class="title has-text-centered">Haz tu Pedido</h2>
+        <form id="pedidoForm">
+            <div class="field">
+                <label class="label">Nombre:</label>
                 <div class="control">
-                    <button type="button" class="button is-primary" onclick="enviarReserva()">Enviar Pedido a WhatsApp</button>
+                    <input class="input" type="text" id="nombre" placeholder="Ingresa tu nombre" required>
                 </div>
-            </form>
-        </div>
+            </div>
+            <div class="field">
+                <label class="label">Fecha de Entrega:</label>
+                <div class="control">
+                    <input class="input" type="date" id="fechaEntrega" required>
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Número de Contacto:</label>
+                <div class="control">
+                    <input class="input" type="tel" id="telefono" placeholder="Ingresa tu número" required>
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Dirección de Entrega:</label>
+                <div class="control">
+                    <input class="input" type="text" id="direccion" placeholder="Ingresa tu dirección" required>
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Detalle del Pedido:</label>
+                <div class="control">
+                    <textarea class="textarea" id="detallePedido"  placeholder="Especifica tu pedido" required></textarea>
+                </div>
+            </div>
+            <div class="field">
+                <div class="control">
+                    <button type="button" class="button is-success" onclick="enviarPedido()">Enviar Pedido por WhatsApp</button>
+                </div>
+            </div>
+        </form>
     </section>
+    
+    <div id="chatbot" class="chatbox" style="display: none;">
+        <div id="chatbot-header">Asistente de Comida 🍔</div>
+        <div id="chat-content">
+            <div class="bot-message">¡Hola! Soy tu asistente de comida. Pregúntame sobre los ingredientes.</div>
+        </div>
+        <input type="text" id="user-input" placeholder="Escribe aquí..." onkeypress="handleKeyPress(event)">
+        <button onclick="sendMessage()">Enviar</button>
+    </div>
+    
+    <button id="chatbot-toggle" onclick="toggleChatbot()">Abrir Chat</button>
+    
+    <div id="robot-animation" class="robot-icon"></div>
+    
+    
 
     <section id="ubicacion" class="section">
         <div class="container has-text-centered">

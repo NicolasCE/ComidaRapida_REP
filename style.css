@@ -11,6 +11,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-x: hidden;
 }
 
 header {
@@ -58,6 +59,7 @@ button {
     background-color: #4caf50;
     color: white;
     border: none;
+    margin-top: 1rem;
     padding: 0.5rem 1rem;
     cursor: pointer;
     border-radius: 5px;
@@ -100,20 +102,103 @@ button:hover {
 }
 
 .menu-image {
-    width: 100%; /* Ajusta el tamaño de la imagen al ancho del contenedor */
-    height: 200px;
-    height: auto; /* Mantiene la relación de aspecto de la imagen */
-    object-fit: cover;
-    border-radius: 5px; /* Bordes redondeados para un estilo más suave */
-    margin-top: 10px; /* Espacio entre la imagen y el contenido de texto */
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
 }
 
 #menu .item {
     transition: box-shadow 0.9s ease; /* Transición suave para sombra */
 }
 
+.menu-section .menu-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.menu-section .button.is-success {
+    background-color: #d32f2f;
+    color: #fff;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.menu-section .subtitle {
+    color: #0D47A1; /* Color azul */
+    font-weight: bold;
+}
+
+.menu-section .title.is-4 {
+    color: #b00d0d; /* Color rojo chileno */
+    margin-bottom: 0.5rem;
+}
+
+.menu-section .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem; /* Espacio entre columnas */
+}
+
+
+/* Estilo general de la sección de menú */
+.menu-section {
+    background-color: #f7f9fc;
+    padding: 3rem 1.5rem; 
+}
+
+.menu-section .item {
+    width: 300px;
+    padding: 1rem;
+    border: 1px solid #C7C7C7;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.menu-section .item:hover {
+    transform: scale(1.05);  
+}
+
 #menu .item:hover {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra al pasar el mouse */
+}
+
+.menu-section .title {
+    color: #d52b1e; /* Rojo para representar el color de la bandera */
+    font-weight: bold;
+}
+
+.menu-section .subtitle {
+    color: #0057b8; /* Azul para complementar el rojo */
+}
+
+.menu-section .button {
+    background-color: #d52b1e; /* Rojo */
+    color: #ffffff;
+    margin-top: 1rem;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+}
+
+.menu-section .button:hover {
+    background-color: #b22222; /* Rojo más oscuro para hover */
+}
+
+.details {
+    background-color: #f1f1f1; /* Fondo claro para los detalles */
+    border-radius: 5px;
+    padding: 0.8rem;
+    text-align: left;
+    margin-top: 0.5rem;
+    transition: max-height 0.3s ease; /* Efecto de animación al mostrar los detalles */
+    color: #333;
 }
 
 /* Estilo para la sección de reserva */
@@ -130,43 +215,6 @@ button:hover {
     margin-top: 10px; /* Espacio entre el texto y el icono */
 }
 
-.menu-section {
-    background-image: url('img/menu.png'); /* Reemplaza con la ruta de tu imagen de fondo */
-    background-size: 100% 100%; /* Estira la imagen para que cubra todo el contenedor */
-    background-position: center; /* Centra la imagen (opcional, puede ser ignorado al usar 100%) */
-    padding: 2rem 0; /* Espaciado vertical */
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .container {
     text-align: center; /* Centra el texto dentro del contenedor */
 }
@@ -177,12 +225,118 @@ button:hover {
 }
 
 .item {
-    margin: 1rem; /* Espaciado entre las columnas */
+    height: 100%; /* Asegúrate de que el contenedor tenga una altura completa */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .menu-image {
-    width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
-    height: auto; /* Mantiene la proporción de la imagen */
+    width: 100%;
+    height: 100%; /* Para que ocupe toda la altura del contenedor */
+    object-fit: cover; /* Esto garantiza que la imagen cubra todo el área sin deformarse */
+    border-radius: 5px;
 }
 
+
+
+/*PEDIDOS FORMULARIO*/
+
+/* Estilo para el formulario */
+#pedidoForm {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.button.is-success {
+    background-color: #28a745;
+    color: #fff;
+    width: 100%;
+    font-size: 1.2em;
+}
+
+textarea {
+    resize: none;
+}
+
+.field {
+    margin-bottom: 1.5rem;
+}
+
+.label {
+    color: #333;
+}
+
+/* Ajustes de fecha */
+input[type="date"] {
+    font-family: inherit;
+    font-size: 1em;
+    padding: 0.5em;
+}
+
+
+
+/*CHATBOX PRUEBA*/
+
+.chatbox {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+#chatbot-header {
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+#chat-content {
+    padding: 10px;
+    overflow-y: auto;
+    height: 200px;
+}
+
+#user-input {
+    border: none;
+    padding: 8px;
+    width: 100%;
+}
+
+button {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+}
+
+/* Estilos para el ícono de robot */
+.robot-icon {
+    width: 50px;
+    height: 50px;
+    background: url('https://cdn-icons-png.flaticon.com/512/3662/3662817.png') no-repeat center center; /* Reemplaza con la ruta a tu ícono */
+    background-size: contain;
+    position: fixed;
+    bottom: 100px; /* Ajusta según sea necesario */
+    right: 20px;
+    animation: robot-animation 20s infinite; /* Agrega la animación */
+}
+
+/* Animación para el robot */
+@keyframes robot-animation {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
 
