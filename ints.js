@@ -18,26 +18,87 @@ function toggleDetails(id) {
 
 function enviarPedido() {
     const nombre = document.getElementById("nombre").value;
-    const fechaEntrega = new Date(document.getElementById("fechaEntrega").value);
+    const fechaEntrega = document.getElementById("fechaEntrega").value;
     const telefono = document.getElementById("telefono").value;
     const direccion = document.getElementById("direccion").value;
     const detallePedido = document.getElementById("detallePedido").value;
 
-    // Formato de fecha en DD/MM/YYYY
-    const fechaFormateada = fechaEntrega.toLocaleDateString("es-CL");
+    if (!nombre || !fechaEntrega || !telefono || !direccion || !detallePedido) {
+        Swal.fire({
+            icon: 'warning',
+            title: 'Datos incompletos',
+            text: 'Por favor, complete todos los campos para continuar con el pedido.',
+            confirmButtonText: 'Entendido'
+        });
+        return;
+    }
 
-    // Mensaje estructurado
+    const fechaFormateada = new Date(fechaEntrega).toLocaleDateString("es-CL");
     const mensaje = `Hola, soy ${nombre}. Me gustaría hacer un pedido para el día ${fechaFormateada}.\n\n` +
                     `📞 Número de contacto: ${telefono}\n` +
                     `📍 Dirección de entrega: ${direccion}\n\n` +
                     `📝 Detalle del pedido:\n${detallePedido}`;
 
     const whatsappURL = `https://wa.me/+56973851366?text=${encodeURIComponent(mensaje)}`;
-    window.open(whatsappURL, "_blank");
+
+    Swal.fire({
+        icon: 'success',
+        title: '¡Pedido listo para enviar!',
+        text: 'Serás redirigido a WhatsApp para completar tu pedido.',
+        confirmButtonText: 'Enviar',
+        showCancelButton: true,
+        cancelButtonText: 'Cancelar'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            window.open(whatsappURL, "_blank");
+        } else if (result.isDismissed) {
+            Swal.fire({
+                icon: 'warning',
+                title: '¿Seguro que deseas cancelar?',
+                text: 'Si cancelas, se limpiarán los campos y se eliminará el pedido.',
+                showCancelButton: true,
+                confirmButtonText: 'Sí, cancelar',
+                cancelButtonText: 'No, mantener'
+            }).then((confirmResult) => {
+                if (confirmResult.isConfirmed) {
+                    // Limpiar los campos del formulario
+                    document.getElementById("nombre").value = '';
+                    document.getElementById("fechaEntrega").value = '';
+                    document.getElementById("telefono").value = '';
+                    document.getElementById("direccion").value = '';
+                    document.getElementById("detallePedido").value = '';
+                    Swal.fire('Campos limpiados', 'El pedido ha sido eliminado.', 'info');
+                }
+            });
+        }
+    });
 }
 
+/*carrusel*/
+// JavaScript para mover el carrusel automáticamente
+document.addEventListener('DOMContentLoaded', () => {
+    const carouselTrack = document.querySelector('.carousel-track');
+    const totalItems = document.querySelectorAll('.carousel-item').length;
+    let currentIndex = 0;
+  
+    function moveCarousel() {
+      // Mueve el carrusel a la siguiente imagen
+      currentIndex++;
+      if (currentIndex >= totalItems) {
+        currentIndex = 0; // Vuelve al inicio
+      }
+      const offset = -currentIndex * 100; // Desplazamiento en porcentaje
+      carouselTrack.style.transform = `translateX(${offset}%)`; // Aplica el desplazamiento
+    }
+  
+    // Configura el carrusel para que se mueva automáticamente cada 5 segundos
+    setInterval(moveCarousel, 5000); // 5000 ms = 5 segundos
+  });
+  
 
-/*PRUEBA DE CHATBOX IA*/ 
+
+
+/* 
 
 function sendMessage() {
     const userInput = document.getElementById("user-input").value;
@@ -87,7 +148,4 @@ function toggleChatbot() {
         document.getElementById("chatbot-toggle").innerText = "Abrir Chat"; // Cambiar texto del botón
     }
 }
-
-
-
-
+PRUEBA DE CHATBOX IA*/

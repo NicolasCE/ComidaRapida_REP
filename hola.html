@@ -9,13 +9,83 @@
     <link rel="stylesheet" href="style.css">
      <!-- Agregar Animate.css -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
 <body>
     <header class="hero is-danger">
         <div class="hero-body">
-            <h1 class="title has-text-centered">Bienvenidos a Comida Rápida Express</h1>
+            <!-- Sección de Bienvenida con logo -->
+            <div class="container">
+                <div class="columns is-vcentered">
+                    <!-- Título Bienvenidos -->
+                    <div class="column is-half">
+                        <h1 class="title has-text-centered has-text-white is-size-1 is-uppercase animate__animated animate__fadeIn">
+                            Bienvenidos a tu lugar de preferencia
+                        </h1>
+                        <p class="subtitle has-text-centered has-text-white is-size-4 animate__animated animate__fadeIn animate__delay-1s">
+                            ¡Comida rápida y deliciosa en un solo lugar!
+                        </p>
+                    </div>
+    
+                    <!-- Carrusel de productos -->
+                    <div class="column is-half">
+                        <div class="carousel animate__animated animate__fadeIn animate__delay-2s">
+                            <div id="carouselExample" class="carousel-container">
+                                <!-- Items del carrusel -->
+                                <div class="carousel-track">
+                                    <!-- Completos -->
+                                    <div class="carousel-item has-text-centered animate__animated animate__fadeIn" style="animation-delay: 0s;">
+                                        <div class="carousel-content">
+                                            <img src="img/completo.jpg" alt="Completos" class="image">
+                                            <h2 class="product-name">Completos</h2>
+                                        </div>
+                                    </div>
+                                    <!-- Churrasco -->
+                                    <div class="carousel-item has-text-centered animate__animated animate__fadeIn" style="animation-delay: 3s;">
+                                        <div class="carousel-content">
+                                            <img src="img/churras.jpg" alt="Churrasco" class="image">
+                                            <h2 class="product-name">Churrasco</h2>
+                                        </div>
+                                    </div>
+                                    <!-- Barros Luco -->
+                                    <div class="carousel-item has-text-centered animate__animated animate__fadeIn" style="animation-delay: 6s;">
+                                        <div class="carousel-content">
+                                            <img src="img/br.jpg" alt="Barros Locos" class="image">
+                                            <h2 class="product-name">Barros Luco</h2>
+                                        </div>
+                                    </div>
+                                    <!-- Chacarero Italiano -->
+                                    <div class="carousel-item has-text-centered animate__animated animate__fadeIn" style="animation-delay: 9s;">
+                                        <div class="carousel-content">
+                                            <img src="img/chacarero_italiano.jpg" alt="Chacarero Italiano" class="image">
+                                            <h2 class="product-name">Chacarero Italiano</h2>
+                                        </div>
+                                    </div>
+                                    <!-- Completo Ass -->
+                                    <div class="carousel-item has-text-centered animate__animated animate__fadeIn" style="animation-delay: 12s;">
+                                        <div class="carousel-content">
+                                            <img src="img/completo_ass.jpg" alt="Completo Ass" class="image">
+                                            <h2 class="product-name">Completo Ass</h2>
+                                        </div>
+                                    </div>
+                                    <!-- Empanada Mechada con Queso -->
+                                    <div class="carousel-item has-text-centered animate__animated animate__fadeIn" style="animation-delay: 15s;">
+                                        <div class="carousel-content">
+                                            <img src="img/empanada_mechada_queso.jpg" alt="Empanada Mechada Queso" class="image">
+                                            <h2 class="product-name">Empanada Mechada con Queso</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
+    
+
     <section id="menu" class="section menu-section">
         <h2 class="title has-text-centered">Menú</h2>
         <div class="container">
@@ -55,72 +125,91 @@
     </section>
     
     <br>
-
-    <section id="pedido">
-        <h2 class="title has-text-centered">Haz tu Pedido</h2>
-        <form id="pedidoForm">
-            <div class="field">
-                <label class="label">Nombre:</label>
-                <div class="control">
-                    <input class="input" type="text" id="nombre" placeholder="Ingresa tu nombre" required>
+    <!-- ESTA ES LA SECCION DEL FORMULARIO PARA PEDIDOS -->
+    <section id="pedido" class="section has-background-light">
+        <div class="container">
+            <h2 class="title has-text-centered is-size-3 has-text-weight-bold">Haz tu Pedido</h2>
+            <form id="pedidoForm">
+                <!-- Nombre -->
+                <div class="field">
+                    <label class="label">Nombre:</label>
+                    <div class="control">
+                        <input class="input is-rounded is-medium" type="text" id="nombre" placeholder="Ingresa tu nombre" required>
+                    </div>
                 </div>
-            </div>
-            <div class="field">
-                <label class="label">Fecha de Entrega:</label>
-                <div class="control">
-                    <input class="input" type="date" id="fechaEntrega" required>
+    
+                <!-- Fecha de Entrega -->
+                <div class="field">
+                    <label class="label">Fecha de Entrega:</label>
+                    <div class="control">
+                        <input class="input is-rounded is-medium" type="date" id="fechaEntrega" required>
+                    </div>
                 </div>
-            </div>
-            <div class="field">
-                <label class="label">Número de Contacto:</label>
-                <div class="control">
-                    <input class="input" type="tel" id="telefono" placeholder="Ingresa tu número" required>
+    
+                <!-- Número de Contacto -->
+                <div class="field">
+                    <label class="label">Número de Contacto:</label>
+                    <div class="control">
+                        <input class="input is-rounded is-medium" type="tel" id="telefono" placeholder="Ingresa tu número" required>
+                    </div>
                 </div>
-            </div>
-            <div class="field">
-                <label class="label">Dirección de Entrega:</label>
-                <div class="control">
-                    <input class="input" type="text" id="direccion" placeholder="Ingresa tu dirección" required>
+    
+                <!-- Dirección de Entrega -->
+                <div class="field">
+                    <label class="label">Dirección de Entrega:</label>
+                    <div class="control">
+                        <input class="input is-rounded is-medium" type="text" id="direccion" placeholder="Ingresa tu dirección" required>
+                    </div>
                 </div>
-            </div>
-            <div class="field">
-                <label class="label">Detalle del Pedido:</label>
-                <div class="control">
-                    <textarea class="textarea" id="detallePedido"  placeholder="Especifica tu pedido" required></textarea>
+    
+                <!-- Detalle del Pedido -->
+                <div class="field">
+                    <label class="label">Detalle del Pedido:</label>
+                    <div class="control">
+                        <textarea class="textarea is-rounded is-medium" id="detallePedido" placeholder="Especifica tu pedido" required></textarea>
+                    </div>
                 </div>
-            </div>
-            <div class="field">
-                <div class="control">
-                    <button type="button" class="button is-success" onclick="enviarPedido()">Enviar Pedido por WhatsApp</button>
+    
+                <!-- Botón Enviar -->
+                <div class="field has-text-centered">
+                    <div class="control">
+                        <button type="button" class="button is-success is-large is-rounded animate__animated animate__pulse" onclick="enviarPedido()">
+                            <span class="icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </span>
+                            <span>Enviar Pedido por WhatsApp</span>
+                        </button>
+                    </div>
                 </div>
-            </div>
-        </form>
+            </form>
+        </div>
     </section>
     
-    <div id="chatbot" class="chatbox" style="display: none;">
-        <div id="chatbot-header">Asistente de Comida 🍔</div>
-        <div id="chat-content">
-            <div class="bot-message">¡Hola! Soy tu asistente de comida. Pregúntame sobre los ingredientes.</div>
-        </div>
-        <input type="text" id="user-input" placeholder="Escribe aquí..." onkeypress="handleKeyPress(event)">
-        <button onclick="sendMessage()">Enviar</button>
-    </div>
-    
-    <button id="chatbot-toggle" onclick="toggleChatbot()">Abrir Chat</button>
-    
-    <div id="robot-animation" class="robot-icon"></div>
-    
-    
-
-    <section id="ubicacion" class="section">
-        <div class="container has-text-centered">
-            <h3>Nos encontramos aqui: </h3> 
+    <section id="ubicacion" class="location-widget">
+        <div class="map-container has-text-centered">
+            <h3 class="title is-6">Si deseas más información sobre la ubicación del restaurante, presiona el mapa:</h3>
             <a href="https://maps.app.goo.gl/dWyDSPgP4rAuhnrh6" target="_blank" title="Ver en Google Maps">
-                <img src="https://cdn-icons-png.flaticon.com/128/17415/17415788.png" alt="Mapa de ubicación" class="map-icon">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0!2d-122.0!3d37.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z0Y7QutGB0Y8g!5e0!3m2!1ses!2scl!4v1234567890"
+                    width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </a>
         </div>
     </section>
+    
+    <section id="ubicacion" class="section location-section">
+    <div class="container has-text-centered">
+        <h3 class="title is-4">Visítanos</h3>
+        <a href="https://maps.app.goo.gl/dWyDSPgP4rAuhnrh6" target="_blank" class="button is-large is-rounded map-button">
+            <span class="icon">
+                <i class="fas fa-map-marker-alt"></i>
+            </span>
+            <span>Ver en Google Maps</span>
+        </a>
+    </div>
+</section>
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="ints.js"></script>
+
 </body>
 </html>

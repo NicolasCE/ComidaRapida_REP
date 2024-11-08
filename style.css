@@ -109,7 +109,8 @@ button:hover {
 }
 
 #menu .item {
-    transition: box-shadow 0.9s ease; /* Transición suave para sombra */
+    transition: box-shadow 0.9s ease;
+    /* Transición suave para sombra */
 }
 
 .menu-section .menu-image {
@@ -128,12 +129,14 @@ button:hover {
 }
 
 .menu-section .subtitle {
-    color: #0D47A1; /* Color azul */
+    color: #0D47A1;
+    /* Color azul */
     font-weight: bold;
 }
 
 .menu-section .title.is-4 {
-    color: #b00d0d; /* Color rojo chileno */
+    color: #b00d0d;
+    /* Color rojo chileno */
     margin-bottom: 0.5rem;
 }
 
@@ -141,20 +144,14 @@ button:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1.5rem; /* Espacio entre columnas */
-}
-
-
-/* Estilo general de la sección de menú */
-.menu-section {
-    background-color: #f7f9fc;
-    padding: 3rem 1.5rem; 
+    gap: 1.5rem;
+    /* Espacio entre columnas */
 }
 
 .menu-section .item {
     width: 300px;
     padding: 1rem;
-    border: 1px solid #C7C7C7;
+    border: 1px solid #1b2192;
     border-radius: 10px;
     text-align: center;
     background-color: #f9f9f9;
@@ -162,24 +159,28 @@ button:hover {
 }
 
 .menu-section .item:hover {
-    transform: scale(1.05);  
+    transform: scale(1.05);
 }
 
 #menu .item:hover {
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra al pasar el mouse */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    /* Sombra al pasar el mouse */
 }
 
 .menu-section .title {
-    color: #d52b1e; /* Rojo para representar el color de la bandera */
+    color: #d52b1e;
+    /* Rojo para representar el color de la bandera */
     font-weight: bold;
 }
 
 .menu-section .subtitle {
-    color: #0057b8; /* Azul para complementar el rojo */
+    color: #0057b8;
+    /* Azul para complementar el rojo */
 }
 
 .menu-section .button {
-    background-color: #d52b1e; /* Rojo */
+    background-color: #d52b1e;
+    /* Rojo */
     color: #ffffff;
     margin-top: 1rem;
     width: 100%;
@@ -188,44 +189,50 @@ button:hover {
 }
 
 .menu-section .button:hover {
-    background-color: #b22222; /* Rojo más oscuro para hover */
+    background-color: #b22222;
+    /* Rojo más oscuro para hover */
 }
 
 .details {
-    background-color: #f1f1f1; /* Fondo claro para los detalles */
+    background-color: #eae5e5;
+    /* Fondo claro para los detalles */
     border-radius: 5px;
     padding: 0.8rem;
     text-align: left;
     margin-top: 0.5rem;
-    transition: max-height 0.3s ease; /* Efecto de animación al mostrar los detalles */
+    transition: max-height 0.3s ease;
+    /* Efecto de animación al mostrar los detalles */
     color: #333;
 }
 
 /* Estilo para la sección de reserva */
 #reserva {
-    background-color: #ffffff; /* Fondo blanco para contraste */
-    border-radius: 8px; /* Bordes redondeados */
-    padding: 2rem; /* Espaciado interior */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para profundidad */
+    background-color: #ffffff;
+    /* Fondo blanco para contraste */
+    border-radius: 8px;
+    /* Bordes redondeados */
+    padding: 2rem;
+    /* Espaciado interior */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Sombra para profundidad */
 }
 
-/* Estilo para el ícono del mapa */
-.map-icon {
-    width: 50px; /* Ajusta el tamaño del icono */
-    margin-top: 10px; /* Espacio entre el texto y el icono */
-}
 
 .container {
-    text-align: center; /* Centra el texto dentro del contenedor */
+    text-align: center;
+    /* Centra el texto dentro del contenedor */
 }
 
 .columns {
-    display: flex; /* Usa Flexbox para el layout */
-    justify-content: center; /* Centra las columnas horizontalmente */
+    display: flex;
+    /* Usa Flexbox para el layout */
+    justify-content: center;
+    /* Centra las columnas horizontalmente */
 }
 
 .item {
-    height: 100%; /* Asegúrate de que el contenedor tenga una altura completa */
+    height: 100%;
+    /* Asegúrate de que el contenedor tenga una altura completa */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -233,8 +240,10 @@ button:hover {
 
 .menu-image {
     width: 100%;
-    height: 100%; /* Para que ocupe toda la altura del contenedor */
-    object-fit: cover; /* Esto garantiza que la imagen cubra todo el área sin deformarse */
+    height: 100%;
+    /* Para que ocupe toda la altura del contenedor */
+    object-fit: cover;
+    /* Esto garantiza que la imagen cubra todo el área sin deformarse */
     border-radius: 5px;
 }
 
@@ -276,67 +285,164 @@ input[type="date"] {
 
 
 
-/*CHATBOX PRUEBA*/
+/*MAPAS*/
 
-.chatbox {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 300px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background: #f5f5f5;
-    display: flex;
-    flex-direction: column;
-    z-index: 1000;
+/* Estilo para el icono del mapa */
+.map-icon {
+    width: 80px;
+    height: 80px;
+    margin-top: 1rem;
+    transition: transform 0.3s ease;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-#chatbot-header {
-    background: #333;
-    color: #fff;
-    padding: 10px;
+.map-icon:hover {
+    transform: scale(1.1);
+    /* Agrandar el ícono al pasar el cursor */
+}
+
+
+/* Estilo para el contenedor del mapa */
+.map-container {
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 1.5rem;
+}
+
+/* Estilo para el panel de ubicación */
+.location-widget {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 300px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    z-index: 1000;
+    /* Asegura que esté por encima de otros elementos */
+}
+
+/* Estilo de contenedor del mapa */
+.map-container {
     text-align: center;
 }
 
-#chat-content {
-    padding: 10px;
-    overflow-y: auto;
-    height: 200px;
+/* Estilos para el mapa */
+.map-container iframe {
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    /* Animación al pasar el mouse */
 }
 
-#user-input {
-    border: none;
-    padding: 8px;
+/* Agrandar el mapa al pasar el cursor */
+.map-container iframe:hover {
+    transform: scale(1.05);
+}
+
+/* Texto del panel */
+.location-widget h3 {
+    font-size: 0.9rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+/* Estilos para la sección de ubicación */
+.location-section {
+    background: none;
+    padding: 2rem 0;
+}
+
+/* Estilos para el botón de ubicación */
+.map-button {
+    background-color: transparent;
+    color: #0c4fb3;
+    /* Color del texto del botón */
+    border: 2px solid #0c4fb3;
+    /* Borde personalizado */
+    box-shadow: none;
+    /* Sin sombra */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    /* Animación de hover */
+}
+
+/* Efecto hover para el botón */
+.map-button:hover {
+    background-color: #0c4fb3;
+    /* Fondo al pasar el cursor */
+    color: #fff;
+    /* Color del texto al pasar el cursor */
+}
+
+/* Estilo del icono dentro del botón */
+.map-button .icon i {
+    color: inherit;
+    margin-right: 5px;
+    /* Espaciado entre icono y texto */
+}
+
+
+input:focus,
+textarea:focus {
+    border-color: #48c78e;
+    /* Color verde similar al de la marca */
+    box-shadow: 0 0 5px rgba(72, 199, 142, 0.5);
+}
+
+button:hover {
+    background-color: #48c78e;
+    /* Cambio de color al pasar el ratón */
+    transition: background-color 0.3s ease;
+}
+
+
+
+
+/*BIENVENIDOS*/
+
+/* Carrusel contenedor */
+.carousel-container {
+    position: relative;
+    overflow: hidden;
     width: 100%;
-}
-
-button {
-    background: #28a745;
-    color: white;
-    border: none;
-    padding: 8px;
-    cursor: pointer;
-}
-
-/* Estilos para el ícono de robot */
-.robot-icon {
-    width: 50px;
-    height: 50px;
-    background: url('https://cdn-icons-png.flaticon.com/512/3662/3662817.png') no-repeat center center; /* Reemplaza con la ruta a tu ícono */
-    background-size: contain;
-    position: fixed;
-    bottom: 100px; /* Ajusta según sea necesario */
-    right: 20px;
-    animation: robot-animation 20s infinite; /* Agrega la animación */
-}
-
-/* Animación para el robot */
-@keyframes robot-animation {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-}
-
+  }
+  
+  /* Carrusel track: Este es el contenedor que moverá las imágenes */
+  .carousel-track {
+    display: flex;
+    transition: transform 1s ease-in-out; /* Animación de deslizamiento */
+  }
+  
+  /* Cada item del carrusel */
+  .carousel-item {
+    flex-shrink: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .carousel-content {
+    max-width: 250px; /* Ajusta el tamaño máximo de las imágenes */
+    text-align: center;
+  }
+  
+  .image {
+    width: 100%; /* Las imágenes ocuparán el 100% de su contenedor */
+    border-radius: 8px;
+  }
+  
+  /* Estilo para los textos */
+  .product-name {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
